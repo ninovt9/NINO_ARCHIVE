@@ -8,7 +8,7 @@ gem 'bootstrap-sass', '3.3.6'
 
 gem 'rails-controller-testing'
 
-gem 'sqlite3'
+# gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -39,8 +39,8 @@ gem 'minitest-reporters', group: :test
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'sqlite3'
-  gem 'byebug', platform: :mri 
+  gem 'sqlite3', '1.3.11'
+  gem 'byebug', '9.0.0', platform: :mri 
 end
 
 group :development do
