@@ -15,7 +15,12 @@ class User < ApplicationRecord
     validates :telephone,   presence: true,     length: {maximum: 11, minimum: 11}
     validates :password,    presence: true,     length: {minimum: 6}
    
-    
+    #返回指定字符的哈希摘要
+    def User.digest(string)
+        cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : 
+                    BCrypt::Engine.cost 
+        BCrypt::Password.create(string, cost: cost) 
+    end
    
     
 end
