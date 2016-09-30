@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  get 'engineering/new'
+
+  get 'engineering/show'
+
   get 'sessions/new'
 
   get 'users/new'
@@ -14,6 +18,10 @@ Rails.application.routes.draw do
   post'/login',     to: 'sessions#create'
   delete'/logout',  to: 'sessions#destroy'
   
+  get '/new_project',  to: "projects#new"
+  post '/new_project', to: "projects#create"
+  
   resources :users
+  resources :projects
   
 end

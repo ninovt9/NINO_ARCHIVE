@@ -1,4 +1,10 @@
 class SessionsController < ApplicationController
+  
+  
+=begin
+    users part
+=end
+  
   def new
   end
   
@@ -18,4 +24,18 @@ class SessionsController < ApplicationController
     log_out
     redirect_to root_url
   end
+  
+
+    
+=begin
+    project part
+=end
+
+  def create_project
+    
+  end
+  
+  
 end
+
+

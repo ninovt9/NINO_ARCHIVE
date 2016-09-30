@@ -1,6 +1,8 @@
 module SessionsHelper
     
-    
+=begin
+    users part
+=end
     
     #登入指定的用户
     def log_in(user)
@@ -22,5 +24,10 @@ module SessionsHelper
         session.delete(:user_id)
         @current_user = nil
     end
+    
+    
+=begin
+    project part
+=end
     
 end
