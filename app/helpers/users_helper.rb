@@ -1,8 +1,8 @@
 module UsersHelper
     
     
-    def default_avatar
-        image_tag("risa.jpg", alt: "avatar", size: "200x200")
+    def default_avatar(size)
+        image_tag("risa.jpg", alt: "avatar", size: size)
     end
     
 end

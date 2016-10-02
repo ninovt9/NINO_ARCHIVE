@@ -5,3 +5,27 @@ Nino:
     telephone:  1234561236
     email:      fm2010@163.company
     password_digest: <%= User.digest('password') %>
+    admin:      true
+    
+Curry: 
+    name:       SethCurry
+    company:    Dalls
+    telephone:  1234561236
+    email:      dallas@163.company
+    password_digest: <%= User.digest('password') %>
+    
+Dirk:
+    name:       Dirk
+    company:    Dalls
+    telephone:  1234561236
+    email:      dallas_no1@163.company
+    password_digest: <%= User.digest('password') %> 
+    
+<% 30.times do |n| %>
+user_<%= n %>:
+    name:       <%= "User #{n}" %>
+    company:    dallas@163.company
+    telephone:  1234561236
+    email:      <%= "user-#{n}@example.com" %>
+    password_digest: <%= User.digest('password') %>
+<% end %>

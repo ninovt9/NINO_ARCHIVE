@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       #登入用户，然后重新定向到用户的资料界面
       log_in user
-      redirect_to user
+      redirect_back_or user
     else
       flash.now[:danger] = 'Invalid email/password combination' 
       render 'new'
