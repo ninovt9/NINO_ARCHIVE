@@ -1,0 +1,24 @@
+<% provide(:title, 'All projects') %>
+<h1>工程列表</h1>
+<%= link_to "新建", new_project_path %>
+
+<ul class="projects">
+    <%#= render @projects %>
+    
+    <% @projects.each do |project| %>
+        <li>
+            <%= link_to project.name, project %>
+            
+            <% @user = User.find_by(params[:name]) %>
+
+            <% if project.user_id == @user.id %>
+            | <%= link_to "删除", "#" %>
+            <% end %>
+            
+        </li>
+    <% end %>
+</ul>
+
+
+
+

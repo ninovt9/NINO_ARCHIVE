@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  position: MyString
-  developer: MyString
+Oracle:
+  name: OracleArena
+  position: Oakland
+  developer: GoldenStateWarriors
 
-two:
-  name: MyString
-  position: MyString
-  developer: MyString
+Airlines:
+  name: AmericanAirlinesCenter
+  position: Dallas
+  developer: DallasMavericks

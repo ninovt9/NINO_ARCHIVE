@@ -1,0 +1,10 @@
+       
+<li>
+    <%= link_to project.name, project %>
+    <% if project.user_id == current_user.id %>
+        | <%= link_to "删除", "#" %>
+    <% end %>
+    
+    <%= link_to project.user_id == current_user.id, "#" %>
+</li>
+
